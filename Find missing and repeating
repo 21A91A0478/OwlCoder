@@ -1,0 +1,20 @@
+#User function Template for python3
+
+class Solution:
+    def findTwoElement( self,arr, n):
+        arr.sort()
+        import collections
+        d = collections.Counter(arr)
+        m = max(d, key=d.get)
+        ma = max(arr)
+        s = sum(set(arr))
+        num = (ma*(ma+1))//2
+        di = num-s
+        a = []
+        a.append(m)
+        if di == 0:
+            a.append(ma+1)
+        else:
+            a.append(di)
+        return a
+        # code here
